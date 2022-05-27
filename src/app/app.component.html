@@ -1,0 +1,129 @@
+<div class="content">
+
+  <div class="d-flex justify-content-center">
+    <p class="line3">Comparativo de Algoritmos de Ordenação</p>
+  </div>
+
+  <div class="container">
+
+    <div class="d-flex justify-content-center">
+
+      <div class="col-md-8">
+        <div *ngIf="!result?.vetor" class="box">
+          
+          <p class="line3">Entrada de dados ><span class="cursor4">_</span> </p>
+          
+          <form #entradaDeDados="ngForm"(ngSubmit)="enviaDadosEntrada(entradaDeDados.value)">
+            <div class="row">
+
+                <div class="col-md-6 form-group">
+                  <label class="col-form-label">Quantidade de números de entrada *</label>
+                  <select class="form-control form-control-sm" name="quantidade" id="quantidade" ngModel="quantidade" required>
+                    <option value="1" selected>100 números</option>
+                    <option value="2">1.000 números</option>
+                    <option value="3">5.000 números</option>
+                    <option value="4">10.000 números</option>
+                    <option value="5">50.000 números</option>
+                  </select>
+                </div>
+
+
+                <div class="col-md-6 form-group">
+                  <label for="name" class="col-form-label">Algoritmo de entrada * </label>
+                  <select  class="form-control form-control-sm" name="algoritmo" id="algoritmo" ngModel="algoritmo" required>
+                    <option value="1" selected>Bubble Sort</option>
+                    <option value="2">Insertion Sort</option>
+                    <option value="3">Selection Sort</option>
+                    <option value="4">Recursive Heap Sort</option>
+                    <option value="5">Recursive Quick Sort</option>
+                    <option value="6">Todos</option>
+                  </select>
+                </div>
+                  
+              </div>
+
+            <div class="row" style="padding: 10px 0;">
+              <div class="d-flex justify-content-end">
+                <button type="submit" id="ordenar" class="btn btn-block btn-primary rounded-0 py-2 px-4"> Ordenar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+
+        <div class="col-md-12">
+        <div *ngIf="result?.vetor" class="box">
+
+          <p class="line3">Saída de dados ><span class="cursor4">_</span> </p>
+
+          <div class="col-md-12 form-group">
+            <table class="table" width="60%">
+              <thead class="thead-primary">
+                <tr>
+                  <th> Array gerado </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td> {{result?.vetor}} </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="col-md-12 form-group">
+            <table class="table" width="60%">
+              <thead class="thead-primary">
+                <tr>
+                  <th> Array ordenado </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>{{result?.vetorOrdenado}} </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="col-md-12 form-group">
+              <table class="table">
+                <thead class="thead-primary">
+                  <tr>
+                    <th colspan="3"> Estatísticas</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <th scope="row"> Nome do Algoritmo </th>
+                    <th scope="row">Tempo total</th>
+                    <th scope="row">Total de operações</th>
+                  </tr>
+                </tbody>
+
+                <tbody *ngFor="let estatistica of result?.estatisticas">
+                  <tr>
+                    <th scope="row" class="scope" rowspan="2" > {{estatistica?.nomeAlgoritmo}} </th>
+                  </tr>
+                  <tr>
+                    <td>{{estatistica?.tempoTotal}} ms</td>
+                    <td>{{estatistica?.operacoes}} operações</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="row" style="padding: 10px 0;">
+              <div class="d-flex justify-content-end">
+                <form #entradaDeDados="ngForm"(ngSubmit)="limpaDados()">
+                <button type="submit" id="ordenar" class="btn btn-block btn-primary rounded-0 py-2 px-4"> Voltar</button>
+              </form>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
