@@ -1,7 +1,9 @@
-# Data Structures Frontend
+# Front-end do projeto de Estruturas de dados em Angular
 
 ![image](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white) 
 ![image](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) 
+
+Esse projeto contém o front-end do projeto de estruturas de dados [disponível neste repositório](https://github.com/myllamachaado/data-structures-backend).
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.5.
 
