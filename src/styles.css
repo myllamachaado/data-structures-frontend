@@ -111,24 +111,20 @@ body {
         .table thead th {
           border: none;
           padding: 10px;
-          font-size: 14px;
+          font-size: 12px;
           color: #fff; }
         .table tbody tr {
           margin-bottom: 10px; }
         .table tbody th, .table tbody td {
           border: none;
           padding: 10px;
-          font-size: 14px;
+          font-size: 12px;
           background: #fff;
           vertical-align: middle;
           border-bottom: 2px solid #f8f9fd; }
         .table tbody th.scope {
           background: #e8ebf8;
           border-bottom: 2px solid #e0e5f6; }
-        @media (min-width: 768px) {
-          .table tbody td:nth-child(odd) {
-            background: #f4f6fc;
-            border-bottom: 2px solid #eceffa; } }
 
             p {
               text-align: center;

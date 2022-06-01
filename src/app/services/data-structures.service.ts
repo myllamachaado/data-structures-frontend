@@ -14,8 +14,8 @@ export class DataStructuresService {
   constructor(private http: HttpClient){ }
 
   public enviaDadosEntrada(data : Data) : Observable<Res> {
-    console.log(data);
-    return this.http.post<Res>(`${this.apiServerUrl}/`, data);
+    //console.log(data);
+    return this.http.post<Res>(`${this.apiServerUrl}/api/v1/ordenacao`, data);
   }
   
 }

@@ -13,7 +13,7 @@
           
           <p class="line3">Entrada de dados ><span class="cursor4">_</span> </p>
           
-          <form #entradaDeDados="ngForm"(ngSubmit)="enviaDadosEntrada(entradaDeDados.value)">
+          <form #entradaDeDados="ngForm"(ngSubmit)="enviaDadosEntrada(entradaDeDados.value, entradaDeDados)">
             <div class="row">
 
                 <div class="col-md-6 form-group">
@@ -34,9 +34,10 @@
                     <option value="1" selected>Bubble Sort</option>
                     <option value="2">Insertion Sort</option>
                     <option value="3">Selection Sort</option>
-                    <option value="4">Recursive Heap Sort</option>
-                    <option value="5">Recursive Quick Sort</option>
-                    <option value="6">Todos</option>
+                    <option value="4">Shell Sort</option>
+                    <option value="5">Recursive Heap Sort</option>
+                    <option value="6">Recursive Quick Sort</option>
+                    <option value="7">Todos</option>
                   </select>
                 </div>
                   
@@ -56,8 +57,8 @@
 
           <p class="line3">Saída de dados ><span class="cursor4">_</span> </p>
 
-          <div class="col-md-12 form-group">
-            <table class="table" width="60%">
+          <div class="col-md-12n form-group">
+            <table class="table">
               <thead class="thead-primary">
                 <tr>
                   <th> Array gerado </th>
@@ -72,7 +73,7 @@
           </div>
 
           <div class="col-md-12 form-group">
-            <table class="table" width="60%">
+            <table class="table">
               <thead class="thead-primary">
                 <tr>
                   <th> Array ordenado </th>
@@ -123,6 +124,7 @@
             </div>
         </div>
       </div>
+
     </div>
   </div>
   </div>
